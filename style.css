@@ -178,8 +178,6 @@ nav .search-icon {
     background-color: rgba(250, 250, 250, 0.3);
     color: #ffffff;
     border-radius: 50%;
-    align-content: center;
-    text-align: center;
     position: relative;
     opacity: 1;
 }
@@ -228,7 +226,7 @@ nav .search-icon {
     color: rgb(60, 60, 245);
     height: 45px;
     width: 45px;
-    align-content: center;
+    line-height: 45px;
     text-align: center;
     border-radius: 50%;
 }
@@ -904,7 +902,8 @@ nav .search-icon {
     border-radius: 50%;
     color: #fff;
     background-color: #7a6ad8;
-    align-content: center;
+    /* align-content: center; */
+    line-height: 30px;
     text-align: center;
 }
 
@@ -1272,7 +1271,8 @@ nav .search-icon {
         border-radius: 50%;
         color: #fff;
         background-color: #7a6ad8;
-        align-content: center;
+        /* align-content: center; */
+        line-height: 20px;
         text-align: center;
     }
 
