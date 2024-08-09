@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasim Tech Zone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body-container w-100  d-flex flex-column align-items-center">
+        <nav class="navbar navbar-expand-md w-100 rounded-bottom-5 position-fixed ">
+            <!-- Justify Content Center - 1 -->
+            <div class="container-fluid justify-content-around justify-content-md-center">
+                <a class="navbar-brand pe-2 m-0" href="#">KASIM TECH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavigation" aria-controls="navbarNavigation" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+
+                <!-- Flex Grow 0 - 2  both(1,2) are used align center-->
+                <div class="collapse navbar-collapse flex-grow-0 " id="navbarNavigation">
+                    <ul class="navbar-nav gap-3 gap-md-0 align-items-md-center  text-center">
+                        <form class="d-lg-flex d-none position-relative align-items-center mx-2" role="search">
+                            <input class="form-control rounded-5" type="search" placeholder="Type Something"
+                                aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass search-icon position-absolute"></i>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link active text-uppercase rounded-5" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase rounded-5" href="#service">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase rounded-5" href="#course">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase rounded-5" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase rounded-5" href="#events">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase rounded-5" href="#" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" role="button">Register Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content ">
+                    <div class="modal-body ">
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phoneNumber" class="form-label">Mobile Number</label>
+                                <input type="number" class="form-control" id="phoneNumber">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="education" class="form-label">Education</label>
+                                <select id="education" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>10th</option>
+                                    <option>12th</option>
+                                    <option>Diploma</option>
+                                    <option>UG</option>
+                                    <option>PG</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="yop" class="form-label">Year of Passed</label>
+                                <input type="number" class="form-control" id="yop">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="inputState" class="form-label">State</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                    <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                                    <option value="assam">Assam</option>
+                                    <option value="bihar">Bihar</option>
+                                    <option value="chhattisgarh">Chhattisgarh</option>
+                                    <option value="goa">Goa</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="haryana">Haryana</option>
+                                    <option value="himachal-pradesh">Himachal Pradesh</option>
+                                    <option value="jharkhand">Jharkhand</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="kerala">Kerala</option>
+                                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="manipur">Manipur</option>
+                                    <option value="meghalaya">Meghalaya</option>
+                                    <option value="mizoram">Mizoram</option>
+                                    <option value="nagaland">Nagaland</option>
+                                    <option value="odisha">Odisha</option>
+                                    <option value="punjab">Punjab</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="sikkim">Sikkim</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                    <option value="telangana">Telangana</option>
+                                    <option value="tripura">Tripura</option>
+                                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                                    <option value="uttarakhand">Uttarakhand</option>
+                                    <option value="west-bengal">West Bengal</option>
+                                    <option value="andaman-and-nicobar-islands">Andaman and Nicobar Islands</option>
+                                    <option value="chandigarh">Chandigarh</option>
+                                    <option value="dadra-and-nagar-haveli-and-daman-and-diu">Dadra and Nagar Haveli and
+                                        Daman and Diu</option>
+                                    <option value="lakshadweep">Lakshadweep</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="puducherry">Puducherry</option>
+                                    <option value="ladakh">Ladakh</option>
+                                    <option value="jammu-and-kashmir">Jammu and Kashmir</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="inputZip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="inputZip">
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Check me out
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn" data-bs-dismiss="modal" data-bs-toggle="modal"
+                            data-bs-target="#exampleM">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleM" tabindex="-1" aria-labelledby="exampleM" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content ">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thanks for choosing Kasim Tech</h5>
+                        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body ">
+                        <p>Further details will be sent to you via email shortly. <br>Please keep an eye out for it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <div class="container-fluid hero-section w-100 ">
+
+            <div class="row justify-content-center h-100 w-100">
+                <div
+                    class="btn-section col-lg-1  h-100 d-flex flex-lg-column justify-content-center align-items-end gap-3 justify-content-lg-end align-items-lg-center">
+                    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon " aria-hidden="true"></span> -->
+                        <i class="fa fa-angle-left"></i>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon " aria-hidden="true"></span> -->
+                        <i class="fa fa-angle-right"></i>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="col-10 col-lg-9 img-section ">
+                    <!-- Carousel transition issues -->
+                    <div id="carouselExample" class="carousel slide h-100" data-bs-touch="true" data-bs-ride="carousel"
+                        data-bs-interval="99999999">
+                        <div class="carousel-inner h-100 overflow-hidden ">
+                            <div class="carousel-item active  h-100 rounded-5 overflow-hidden">
+                                <img src="./asserts/images/img-02.jpg" alt=""
+                                    class="d-block h-100 w-100 object-fit-cover">
+                                <div
+                                    class="carousel-caption d-flex flex-column gap-5 justify-content-center align-items-center align-items-lg-start text-lg-start h-100 py-5 ">
+                                    <h6 class="rounded-5">OUR COURSES</h6>
+                                    <h2>With Kasim Tech Teachers, Everything is Easier</h2>
+                                    <p>With Kasim Tech Teachers, learning is a breeze. Our experts make complex ideas
+                                        simple, so you can easily reach your goals and enjoy the journey. Elevate your
+                                        education effortlessly with our dedicated support and engaging online courses.
+                                    </p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-3 flex-wrap gap-lg-5">
+                                        <button class="rounded-5">Request Demo</button>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+                                            <i class="fa-solid fa-play"></i>
+                                            <p>What's Kasim Tech?</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item  h-100 rounded-5 overflow-hidden">
+                                <img src="./asserts/images/img-03.jpg" alt=""
+                                    class="d-block h-100 w-100 object-fit-cover">
+                                <div
+                                    class="carousel-caption d-flex flex-column gap-5 justify-content-center align-items-center align-items-lg-start text-lg-start h-100 py-5 ">
+                                    <h6 class="rounded-5">BEST RESULT</h6>
+                                    <h2>Get the best result out of your effort</h2>
+                                    <p>Maximize your results with minimal effort. Our courses are designed to help you
+                                        achieve top outcomes efficiently, ensuring every bit of effort you put in pays
+                                        off.</p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-3 flex-wrap gap-lg-5">
+                                        <button class="rounded-5">Request Demo</button>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+                                            <i class="fa-solid fa-play"></i>
+                                            <p>What's the Best Result?</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item  h-100 rounded-5 overflow-hidden">
+                                <img src="./asserts/images/img-04.jpg" alt=""
+                                    class="d-block h-100 w-100 object-fit-cover">
+                                <div
+                                    class="carousel-caption d-flex flex-column gap-5 justify-content-center align-items-center align-items-lg-start text-lg-start h-100 py-5  ">
+                                    <h6 class="rounded-5">ONLINE LEARNING</h6>
+                                    <h2 class="text-capitalize">online learning helps you to save the time</h2>
+                                    <p>Online learning saves you time by offering flexible schedules and self-paced
+                                        courses, allowing you to balance your education with other commitments
+                                        efficiently.</p>
+                                    <div
+                                        class="d-flex align-items-center justify-content-center gap-3 flex-wrap gap-lg-5">
+                                        <button class="rounded-5">Request Demo</button>
+                                        <div class="d-flex align-items-center justify-content-center gap-2 flex-wrap">
+                                            <i class="fa-solid fa-play"></i>
+                                            <p>Why's Online Courses?</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Sub Section -->
+        <div class="container-fluid hero-sub-section w-100 py-5">
+            <div class="row justify-content-around gap-5 gap-md-0 ">
+                <div class="col-12 col-md-5 col-lg-4 pe-5 pt-5 d-flex justify-content-center align-items-center">
+                    <div class="card position-relative ">
+                        <div class="card-body rounded-5 d-flex flex-column justify-content-end gap-3 ">
+                            <h4 class="card-title pt-4">Self-Placed Learning:</h4>
+                            <p class="card-text">Move through materials at your own speed, allowing for a more
+                                personalized learning experience.
+                            </p>
+                            <p class="card-text">
+                                <button class="rounded-5">Read More</button>
+                            </p>
+                            <div class="position-absolute">
+
+                                <img src="./asserts/images/img-05.png" alt="book-icon"
+                                    class="w-100 h-100 object-fit-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 col-lg-4 pe-5 pt-5 d-flex justify-content-center align-items-center">
+                    <div class="card position-relative ">
+                        <div class="card-body rounded-5 d-flex flex-column justify-content-end gap-3 ">
+                            <h4 class="card-title pt-4">Cost-Effective:</h4>
+                            <p class="card-text">Often more affordable than traditional in-person classes, with fewer
+                                additional expenses like commuting or textbooks.</p>
+                            <p class="card-text">
+                                <button class="rounded-5">Read More</button>
+                            </p>
+                            <div class="position-absolute">
+
+                                <img src="./asserts/images/img-06.png" alt="book-icon"
+                                    class="w-100 h-100 object-fit-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-md-5 col-lg-4 pe-5 pt-5 mt-md-5 mt-lg-0 d-flex justify-content-center align-items-center">
+                    <div class="card position-relative ">
+                        <div class="card-body rounded-5 d-flex flex-column justify-content-end gap-3 ">
+                            <h4 class="card-title pt-4">Work-Life Balance:</h4>
+                            <p class="card-text">Integrate learning into your existing lifestyle without disrupting
+                                daily responsibilities.</p>
+                            <p class="card-text">
+                                <button class="rounded-5">Read More</button>
+                            </p>
+                            <div class="position-absolute">
+
+                                <img src="./asserts/images/img-07.png" alt="book-icon"
+                                    class="w-100 h-100 object-fit-contain">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Section -->
+        <div class="container-fluid about-section w-100 py-5" data-bs-spy="scroll" id="service">
+            <div class="row justify-content-center gap-5 gap-lg-0 ">
+                <div class="col-12 col-sm-9 col-md-9 col-lg-5 accordion-container">
+                    <div class="accordion d-flex flex-column gap-3 rounded-5" id="accordionExample">
+                        <div class="accordion-item overflow-hidden rounded-5">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Where shall we begin?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Begin by defining your goals and selecting a course that matches your interests.
+                                    Craft a study plan, stay engaged with the material, and regularly assess your
+                                    progress. Embrace the journey, and you'll see your skills and confidence soar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item overflow-hidden rounded-5">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How do we work together?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">Let’s start by setting clear goals and roles. We’ll stay in
+                                    touch regularly, use the best tools for collaboration, and support each other
+                                    throughout. Together, we'll track progress and adjust as needed to achieve our
+                                    shared success.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item overflow-hidden rounded-5">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Why KASIM TECH is the best?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Our platform stands out for its user-friendly design, expert instructors, and
+                                    diverse course offerings. We provide flexible learning options, personalized
+                                    support, and real-world applications to ensure you achieve your goals effectively
+                                    and enjoyably.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item overflow-hidden rounded-5">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Do we get the best support?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">Absolutely! Our platform offers top-notch support with
+                                    expert instructors, responsive help desks, and personalized guidance to ensure you
+                                    have everything you need for a smooth and successful learning experience.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="col-12 col-sm-9 col-md-9 align-self-center col-lg-7 d-flex flex-column align-items-start gap-4 about-container rounded-5 ">
+                    <h6 class="text-uppercase">About us</h6>
+                    <h2 class="text-capitalize">What Make Us The Best Academy Online?</h2>
+                    <p>What sets us apart as the best online academy is our expert instructors, personalized support,
+                        and cutting-edge resources. We offer a flexible learning environment with courses designed to
+                        meet your needs and help you succeed.</p>
+                    <button class="rounded-5 ">Discover More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Cousre Section -->
+        <div class="container-fluid course-section w-100 py-5" data-bs-spy="scroll" id="course">
+            <div class="row justify-content-center align-items-center pb-5 gap-2">
+                <h6 class="text-uppercase text-center">latest courses</h6>
+                <h2 class="text-center pb-5">Latest Courses</h2>
+                <div class="col-12 d-flex flex-column align-items-center gap-5 ">
+                    <input type="radio" name="menu" id="showall" checked>
+                    <input type="radio" name="menu" id="webdesign">
+                    <input type="radio" name="menu" id="development">
+                    <input type="radio" name="menu" id="wordpress">
+                    <div
+                        class="label-list d-flex justify-content-center align-items-center gap-2 flex-wrap rounded-5 py-md-2 px-md-5">
+                        <label for="showall" class="rounded-5 py-2 px-4">Show
+                            All</label>
+                        <label for="webdesign" class="rounded-5 py-2 px-4" data-bs-target=".webdesign"
+                            aria-controls="webdesign" data-bs-toggle="collapse" aria-expanded="false" type="button">Web
+                            Design</label>
+                        <label for="development" class="rounded-5 py-2 px-4" data-bs-target=".development"
+                            aria-controls="development" data-bs-toggle="collapse" aria-expanded="false"
+                            type="button">Development</label>
+                        <label for="wordpress" class="rounded-5 py-2 px-4" data-bs-target=".wordpress"
+                            aria-controls="wordpress" data-bs-toggle="collapse" aria-expanded="false"
+                            type="button">Wordpress</label>
+                    </div>
+                    <div
+                        class="row justify-content-center align-items-start w-100 row-gap-5 column-gap-5 column-gap-md-2 column-gap-lg-3 row-gap-md-2 row-gap-lg-3  ">
+                        <div
+                            class="collapse  col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall webdesign  ">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-08.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Farzhana</h5>
+                                    <h4 class="card-text  pb-2">UI/UX Design</h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">Webdesign</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>49</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="collapse col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall development">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-09.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Saravanan</h5>
+                                    <h4 class="card-text  pb-2">Web Development Tips</h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">Development</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>25</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="collapse col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall wordpress">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-10.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Soundarya</h5>
+                                    <h4 class="card-text  pb-2">Basics of Wordpress</h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">Wordpress</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>49</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="collapse col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall development">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-12.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Soundarya</h5>
+                                    <h4 class="card-text pb-2">SQL Advanced Concept</h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">Development</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>49</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="collapse col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall wordpress">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-13.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Saravanan</h5>
+                                    <h4 class="card-text  pb-2">Learn Wordpress Web Design </h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">Wordpress</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>49</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="collapse col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center box px-3 pb-3 showall webdesign">
+                            <div class="card rounded-4  position-relative w-100 overflow-hidden" class="">
+                                <img class="card-img-top rounded-4" src="./asserts/images/img-11.jpg"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title pt-2 pb-1">Sheik Aahin</h5>
+                                    <h4 class="card-text  pb-2">HTML &AMP; CSS Doubt Session</h4>
+                                </div>
+                                <p class="text-uppercase rounded-5 position-absolute">webdesign</p>
+                                <div class="position-absolute">
+                                    <p class="position-absolute"><sup>&dollar;</sup>29</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="row justify-content-around course-sub-container align-items-center ">
+
+                <div class="col-lg-2 col-sm-6 text-center pe-5 pe-sm-0">
+                    <h2 class="fw-bold ">150 &plus;</h2>
+                    <p class="fw-semibold ">Happy Student</p>
+                </div>
+                <div class="col-lg-2 col-sm-6 text-center  pe-5 pe-sm-0">
+                    <h2 class="fw-bold ">70 &plus;</h2>
+                    <p class="fw-semibold ">Course Hours</p>
+                </div>
+
+                <div class="col-lg-2 col-sm-6 text-center pe-5 pe-sm-0 ">
+                    <h2 class="fw-bold ">50 &plus;</h2>
+                    <p class="fw-semibold ">Employed Students</p>
+                </div>
+
+                <div class="col-lg-2 col-sm-6 text-center pe-5 pe-sm-0">
+                    <h2 class="fw-bold">2 &plus;</h2>
+                    <p class="fw-semibold ">Years Experience</p>
+                </div>
+            </div>
+        </div>
+        <!-- Teacher Section -->
+        <div class="container-fluid teacher-section w-100 py-5" data-bs-spy="scroll" id="team">
+            <div
+                class="row justify-content-center align-items-center row-gap-5 column-gap-sm-5 column-gap-lg-4 px-lg-2 px-md-5 ">
+                <div class="col-10 col-sm-6  col-lg-3 rounded-4 ">
+                    <div class="card text-start ">
+                        <div
+                            class="card-body text-center py-5 d-flex flex-column align-items-center gap-3 justify-content-start">
+                            <h5 class="card-title ">UI/UX Teacher</h5>
+                            <h4 class="card-text ">Farzhana</h4>
+                            <div
+                                class="social-icon d-flex justify-content-center align-items-center gap-3 gap-sm-2 pt-3">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <img src="./asserts/images/img-14.jpg" alt="" class="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-6  col-lg-3 rounded-4 ">
+                    <div class="card text-start ">
+                        <div
+                            class="card-body text-center py-5 d-flex flex-column align-items-center gap-3 justify-content-start">
+                            <h5 class="card-title ">Webdesigner Teacher</h5>
+                            <h4 class="card-text ">Soundarya</h4>
+                            <div
+                                class="social-icon d-flex justify-content-center align-items-center gap-3 gap-sm-2 pt-3">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <img src="./asserts/images/img-15.jpg" alt="" class="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-6  col-lg-3 rounded-4 ">
+                    <div class="card text-start ">
+                        <div
+                            class="card-body text-center py-5 d-flex flex-column align-items-center gap-3 justify-content-start">
+                            <h5 class="card-title ">Front End Teacher</h5>
+                            <h4 class="card-text ">Saravanan</h4>
+                            <div
+                                class="social-icon d-flex justify-content-center align-items-center gap-3 gap-sm-2 pt-3">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <img src="./asserts/images/img-16.jpg" alt="" class="">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-6  col-lg-3 rounded-4 ">
+                    <div class="card text-start ">
+                        <div
+                            class="card-body text-center py-5 d-flex flex-column align-items-center gap-3 justify-content-start">
+                            <h5 class="card-title ">MERN Teacher</h5>
+                            <h4 class="card-text ">Sheik Aahin</h4>
+                            <div
+                                class="social-icon d-flex justify-content-center align-items-center gap-3 gap-sm-2 pt-3">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <img src="./asserts/images/img-17.jpg" alt="" class="">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonials  -->
+        <div class="container-fluid testimonials-section w-100 py-5">
+            <div class="row justify-content-center align-items-center  gap-5 gap-lg-0">
+                <!-- Two Carousel issues -->
+                <div class="col-12 col-sm-12 col-md-9 col-lg-6 carousel-container">
+                    <div id="carouselE" class="carousel slide h-100" data-bs-touch="true" data-bs-ride="carousel"
+                        data-bs-interval="99999999">
+                        <div class="carousel-inner h-100">
+                            <div class="carousel-item active h-100 rounded-5 overflow-hidden">
+                                <!-- <img src="./asserts/images/img-02.jpg" alt=""
+                                    class="d-block h-100 w-100 object-fit-cover"> -->
+                                <div
+                                    class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 w-100">
+                                    <p>Exceptional courses and support transformed my learning experience. Engaging
+                                        content, outstanding instructors, and quick goal achievement make this platform
+                                        a top choice for anyone seeking effective education.</p>
+                                    <div
+                                        class="d-flex flex-sm-row align-items-center justify-content-center gap-3 flex-column text-center text-sm-start">
+                                        <img src="./asserts/images/img-19.jpg" alt="">
+                                        <div class="d-flex flex-column justify-content-start gap-2">
+                                            <p>UI/UX Desginer</p>
+                                            <h4>Madhan Kumar</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item active  h-100 rounded-5 overflow-hidden">
+                                <!-- <img src="./asserts/images/img-03.jpg" alt=""
+                                    class="d-block h-100 w-100 object-fit-cover"> -->
+                                <div
+                                    class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 w-100">
+                                    <p>Incredible learning experience with engaging content and top-notch instructors.
+                                        Support is outstanding, and I achieved my goals faster than expected. Highly
+                                        recommend this platform!.</p>
+                                    <div
+                                        class="d-flex flex-sm-row align-items-center justify-content-center gap-3 flex-column text-center text-sm-start">
+                                        <img src="./asserts/images/img-20.jpg" alt="">
+                                        <div class="d-flex flex-column justify-content-start gap-2">
+                                            <p>Full Stack Developer</p>
+                                            <h4>Mahalakshmi</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-container">
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselE"
+                                data-bs-slide="prev">
+
+                                <i class="fa fa-angle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselE"
+                                data-bs-slide="next">
+                                <i class="fa fa-angle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="col-12 col-sm-9 col-md-9  col-lg-5 d-flex flex-column align-items-start gap-4 testimonials-container rounded-5 ps-lg-5">
+                    <h6 class="text-uppercase">Testimonials</h6>
+                    <h2 class="text-capitalize">What they say about us?</h2>
+                    <p>Here's what our learners are saying: <em style="font-weight: 600;">'Exceptional courses and
+                            support,' 'A transformative learning experience,' and 'The best platform for achieving my
+                            goals.'</em> Our students rave about our expert instructors, engaging content, and the
+                        personalized attention they receive.</p>
+                    <button class="rounded-5 ">Know More</button>
+                </div>
+            </div>
+        </div>
+        <!-- Events Section -->
+        <div class="container-fluid event-section w-100 py-5" data-bs-spy="scroll" id="events">
+            <div class="row justify-content-center text-center">
+                <div class="col-12  d-flex flex-column align-items-center justify-content-center gap-3">
+                    <h6 class="text-uppercase">SCHEDULE</h6>
+                    <h2>Upcoming Events</h2>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-12  d-flex align-items-center justify-content-center ">
+                    <div class="card w-100 h-100 rounded-5">
+                        <div class="icon-wrapper">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="row w-100 h-100  justify-content-center ps-4">
+
+                            <div class="col-lg-4 position-relative">
+                                <div class="rounded-5 img-wrapper">
+                                    <img src="./asserts/images/img-09.jpg" class="w-100 h-100 object-fit-cover "
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 d-flex justify-content-center">
+                                <div class="row w-100 justify-content-start justify-content-lg-around ">
+                                    <div class="col-12 col-lg-3 d-flex flex-column gap-3 py-3 align-items-start">
+                                        <h6 class="rounded-5 text-uppercase text-center">FRONT END</h6>
+                                        <h4>Problem Solving Session</h4>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+                                        <span>Date &colon;</span>
+                                        <h5>01 Nov 2024</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3  d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Duration &colon;</span>
+                                        <h5>3 Hours</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Price &colon;</span>
+                                        <h5>$ 69</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-12  d-flex align-items-center justify-content-center ">
+                    <div class="card w-100 h-100 rounded-5">
+                        <div class="icon-wrapper">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="row w-100 h-100  justify-content-center ps-4">
+
+                            <div class="col-lg-4 position-relative">
+                                <div class="rounded-5 img-wrapper">
+                                    <img src="./asserts/images/img-10.jpg" class="w-100 h-100 object-fit-cover "
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 d-flex justify-content-center">
+                                <div class="row w-100 justify-content-start justify-content-lg-around ">
+                                    <div class="col-12 col-lg-3 d-flex flex-column gap-3 py-3 align-items-start">
+                                        <h6 class="rounded-5 text-uppercase text-center">FRONT END</h6>
+                                        <h4>Problem Solving Session</h4>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+                                        <span>Date &colon;</span>
+                                        <h5>01 Nov 2024</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3  d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Duration &colon;</span>
+                                        <h5>3 Hours</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Price &colon;</span>
+                                        <h5>$ 69</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-12 d-flex align-items-center justify-content-center ">
+                    <div class="card w-100 h-100 rounded-5">
+                        <div class="icon-wrapper">
+                            <i class="fa fa-angle-right"></i>
+                        </div>
+                        <div class="row w-100 h-100  justify-content-center ps-4">
+
+                            <div class="col-lg-4 position-relative">
+                                <div class="rounded-5 img-wrapper">
+                                    <img src="./asserts/images/img-11.jpg" class="w-100 h-100 object-fit-cover "
+                                        alt="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 d-flex justify-content-center">
+                                <div class="row w-100 justify-content-start justify-content-lg-around ">
+                                    <div class="col-12 col-lg-3 d-flex flex-column gap-3 py-3 align-items-start">
+                                        <h6 class="rounded-5 text-uppercase text-center">Full stack</h6>
+                                        <h4>Spring Boot Mastery</h4>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+                                        <span>Date &colon;</span>
+                                        <h5>07 Oct 2024</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3  d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Duration &colon;</span>
+                                        <h5>1 Week</h5>
+                                    </div>
+                                    <div
+                                        class="col-6 col-sm-4 col-lg-3 d-flex flex-column justify-content-lg-center align-items-lg-center gap-3 py-3">
+
+                                        <span>Price &colon;</span>
+                                        <h5>$ 99</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Contact S/ection -->
+        <div class="container-fluid contact-section w-100 py-5">
+            <div class="row justify-content-center gap-5 gap-lg-0 py-5 px-sm-2">
+                <div
+                    class="col-12 col-sm-9 col-md-9 align-self-center col-lg-7 d-flex flex-column align-items-start gap-4 contact-container rounded-4">
+                    <h6 class="text-uppercase">Contact</h6>
+                    <h2 class="text-capitalize">Feel free to contact us anytime</h2>
+                    <p>Feel free to contact us anytime with any questions or needs. Whether you require course
+                        information, technical support, or guidance on your learning journey, we're here to assist you.
+                        Our team is dedicated to ensuring a smooth and successful experience for you. Reach out via
+                        email, phone, or chat - your success is our top priority!</p>
+                    <div class="row justify-content-start w-100 offer-container align-items-center">
+                        <div class="col-12  offer-box  rounded-5  position-relative  ">
+                            <p class="text-uppercase">Valid: <span class="text-uppercase">24 april 2025</span>
+                            </p>
+                            <p class="">Special Offer <span>50%</span> OFF</p>
+                            <i class="fa fa-angle-right"></i>
+                            <div class="d-flex flex-column justify-content-center ">
+                                <p>OFF</p>
+                                <p>50%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9 col-md-9 col-lg-5 form-container align-self-center">
+                    <form class="d-flex flex-column gap-3 rounded-5 ">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control rounded-5" placeholder="Your name...">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control rounded-5" aria-describedby="emailHelp"
+                                placeholder="Your E-mail...">
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control rounded-5" placeholder="Leave a comment here"
+                                style="height: 150px;resize: none;">Your Message</textarea>
+                        </div>
+                        <button class="rounded-5" data-bs-toggle="modal" data-bs-target="#contactModal"
+                            type="button">Send Message Now</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Thank you for reaching out!</h5>
+                            <button type="button" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body ">
+                            <p>We’ve received your message and will review it shortly. For urgent inquiries, please contact us directly at +91 90802 15778. We appreciate your feedback and will get back to you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <div class="container-fluid footer-section">
+            <div class="row justify-content-center align-items-center flex-wrap">
+                <div class="col-12 text-center">
+                    <p>Copyright &copy; 2024 Kasim Tech Organization. All rights reserved.</p>
+                    <p>Designed By <a href="#" class="">AahinMehreen</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+    </script>
+    <!-- Extra Popper Js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script> -->
+
+</body>
+
+</html>
